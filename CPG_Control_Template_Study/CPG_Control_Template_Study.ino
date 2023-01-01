@@ -133,7 +133,7 @@ void loop(){
         // smooth modulation of offset
         osc[i].rateOfOffset = b * (osc[i].targetOffset - osc[i].offset);
 
-        // solving differential equation for phase and amplitude
+        // solving differential equation for phase and amplitude and offset
         osc[i].phase = osc[i].phase + osc[i].rateOfPhase * timeStep/1000.0;
         osc[i].amplitude = osc[i].amplitude + osc[i].rateOfAmplitude * timeStep/1000.0;
         osc[i].offset = osc[i].offset + osc[i].rateOfOffset * timeStep/1000.0;
